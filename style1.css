@@ -1,0 +1,139 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* ===== BODY ===== */
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+/* ===== BACKGROUND SHAPES ===== */
+body::before, body::after {
+content: "";
+position: absolute;
+border-radius: 50%;
+filter: blur(80px);
+opacity: 0.6;
+}
+
+body::before {
+width: 300px;
+height: 300px;
+background: #ff6ec4;
+top: -50px;
+left: -50px;
+}
+
+body::after {
+width: 350px;
+height: 350px;
+background: #00f2fe;
+bottom: -80px;
+right: -80px;
+}
+
+/* ===== CONTAINER (GLASS EFFECT) ===== */
+.container {
+position: relative;
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(15px);
+padding: 40px;
+border-radius: 20px;
+text-align: center;
+width: 360px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+color: white;
+animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+margin-bottom: 10px;
+font-weight: 700;
+}
+
+/* ===== TAGLINE ===== */
+.tagline {
+font-size: 14px;
+opacity: 0.9;
+margin-bottom: 20px;
+}
+
+/* ===== INPUT FIELDS ===== */
+input {
+width: 90%;
+padding: 12px;
+margin: 10px 0;
+border-radius: 10px;
+border: none;
+outline: none;
+font-size: 14px;
+background: rgba(255,255,255,0.2);
+color: white;
+}
+
+input::placeholder {
+color: #eee;
+}
+
+/* ===== BUTTONS ===== */
+.btn, button {
+text-decoration: none;
+background: linear-gradient(90deg, #ff6ec4, #7873f5);
+color: white;
+padding: 12px 20px;
+border-radius: 25px;
+margin: 10px;
+display: inline-block;
+border: none;
+cursor: pointer;
+transition: 0.3s;
+font-weight: 500;
+}
+
+/* Hover Effect */
+.btn:hover, button:hover {
+transform: scale(1.1);
+box-shadow: 0 5px 20px rgba(255,255,255,0.4);
+}
+
+/* Secondary Button */
+.secondary {
+background: linear-gradient(90deg, #00f2fe, #4facfe);
+}
+
+/* ===== LINKS ===== */
+a {
+color: #fff;
+text-decoration: none;
+font-size: 14px;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* ===== CHECKBOX ===== */
+label {
+font-size: 13px;
+display: block;
+margin-top: 5px;
+}
+
+/* ===== SMALL TEXT ===== */
+p {
+font-size: 14px;
+}

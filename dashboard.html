@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart User Dashboard</title><!-- CSS -->
+<link rel="stylesheet" href="dashboard.css">
+
+<!-- jsPDF (IMPORTANT for PDF 🔥) -->
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+</head>
+<body><header>
+    <h2>🔐 Personal Data Dashboard</h2>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header><div class="container"><h3 id="welcome"></h3>
+
+<!-- PROFILE -->
+<section>
+    <h3>👤 Personal Profile</h3>
+    <form onsubmit="return saveProfile()">
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="city" placeholder="City" required>
+        <button type="submit">Save Profile</button>
+    </form>
+    <div id="profileDisplay"></div>
+</section>
+
+<!-- TASKS -->
+<section>
+    <h3>📅 Tasks</h3>
+    <input type="text" id="taskInput" placeholder="Enter Task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+</section>
+
+<!-- EXPENSE -->
+<section>
+    <h3>💰 Expense Tracker</h3>
+    <input type="text" id="expenseName" placeholder="Expense Name">
+    <input type="number" id="expenseAmount" placeholder="Amount">
+    <button onclick="addExpense()">Add Expense</button>
+    <p id="totalExpense"></p>
+</section>
+
+<!-- NOTES -->
+<section>
+    <h3>📝 Secure Notes</h3>
+    <textarea id="noteInput" placeholder="Write your notes..."></textarea>
+    <button onclick="saveNote()">Save Note</button>
+    <p id="savedNote"></p>
+</section>
+
+<!-- DOCUMENTS -->
+<section>
+    <h3>📁 Documents</h3>
+    <input type="file" id="documentUpload">
+    <button onclick="saveDocument()">Upload Document</button>
+    <ul id="docList"></ul>
+</section>
+
+<!-- PHOTOS & VIDEOS -->
+<section>
+    <h3>🖼️ Photos & Videos</h3>
+    <input type="file" id="mediaUpload" accept="image/*,video/*">
+    <button onclick="saveMedia()">Upload</button>
+    <div id="mediaPreview"></div>
+</section>
+
+<!-- PDF EXPORT -->
+<section>
+    <h3>📄 Export Data</h3>
+    <button onclick="exportPDF()">Download PDF</button>
+</section>
+
+<!-- LOGOUT -->
+<button onclick="logout()">Logout</button>
+
+</div>
+<!-- JS -->
+ <script src="dashboard.js"></script>
+</body>
+</html>

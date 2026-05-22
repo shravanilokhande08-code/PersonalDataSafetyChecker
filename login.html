@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Personal Data Safety Checker</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body><div class="container">
+    <h2>🔐 User Login</h2><form onsubmit="return loginUser()">
+    <input type="text" id="username" placeholder="Enter Username" required>
+
+    <input type="password" id="password" placeholder="Enter Password" required>
+
+    <label>
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+    </label>
+
+    <button type="submit" class="btn">Login</button>
+</form>
+
+<p>Don't have an account? <a href="register.html">Register Here</a></p>
+
+</div><script src="login.js"></script></body>
+</html>
